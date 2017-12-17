@@ -11,3 +11,4 @@ exists();
 is_file();
 parent_path();
 filename();
+make_absolute();
