@@ -9,3 +9,5 @@ path类封装了目录的操作:
 is_directory() ;
 exists();
 is_file();
+parent_path();
+filename();
