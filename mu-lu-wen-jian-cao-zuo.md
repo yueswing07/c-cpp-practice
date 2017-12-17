@@ -15,3 +15,4 @@ make_absolute();
 getcwd();
 getAllFiles();
 create_directory_deep();
+extension();
