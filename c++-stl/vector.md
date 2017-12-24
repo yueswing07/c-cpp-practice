@@ -71,3 +71,6 @@ void vectorTest(){
 
 }
 
+##参考
+删除：http://blog.csdn.net/duan19920101/article/details/50717748
+
