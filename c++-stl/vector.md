@@ -5,7 +5,7 @@
 
 
 ## 增加 获取 删除 修改
-
+总结： 删除指定元素要注意 删除后迭代器会失效。采用两种方式解决：1.删除元素后，让迭代器重头开始。2.erase 返回下一元素的迭代器给迭代器，增加i == vectorStr.end() 跳出循环判断。
 #include <vector>
 void vectorTest(){
 	// create 
@@ -32,10 +32,20 @@ void vectorTest(){
 	}
 	// delete specified item
 	for (auto i = vectorStr.begin(); i < vectorStr.end(); i++)
-	{
+	{ 
 		if ((*i) == "b"){
 			vectorStr.erase(i);
 			i = vectorStr.begin();
+		}
+	}
+	for (auto i = vectorStr.begin(); i < vectorStr.end(); i++)
+	{
+		if ((*i) == "b"){
+			i = vectorStr.erase(i);
+			//i = vectorStr.begin();
+		}
+		if (i == vectorStr.end()){
+			break;
 		}
 	}
 	cout << "delete specified item: ";
