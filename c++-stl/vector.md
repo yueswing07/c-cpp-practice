@@ -83,4 +83,5 @@ void vectorTest(){
 
 ##参考
 删除：http://blog.csdn.net/duan19920101/article/details/50717748
+http://blog.csdn.net/hancunai0017/article/details/7032383
 
