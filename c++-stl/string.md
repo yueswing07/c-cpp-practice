@@ -9,11 +9,10 @@
 
 ## 增加 获取 删除 修改
 总结： 
-增加：使用 map[key]=value; 效果增加或存在替换
-获取 map[key]; 效果得到value，或空，空对象（int->0,string "")
-删除：指定元素要注意 删除后迭代器会失效。循环内不同于vector的erase返回下一个迭代器，返回void
-所以循环内使用mapObj.erase(i++)备份迭代器。
-修改： map[key]=value 
+增加：使用 str = "aaa"; 效果增加或存在替换 直接复制也可以替换
+获取： 获取c风格字符 str.c_str()
+删除：erase replace 等
+修改： 1.复制语句 2.replace
 #include <string>
 void strTest(){
 
