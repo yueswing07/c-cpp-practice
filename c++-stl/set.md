@@ -7,9 +7,9 @@
 ## 增加 获取 删除 修改
 总结： 
 增加：使用 .insert(val); 效果增加值，重复的值只存在一个。
-获取 map[key]; 效果得到value，或空，空对象（int->0,string "")
+获取 1.迭代器循环 2.find(val)找到返回迭代器，没有找到返回end迭代器位置
 删除：指定元素要注意 删除后迭代器会失效。循环内不同于vector的erase返回下一个迭代器，返回void
-所以循环内使用mapObj.erase(i++)备份迭代器。
+所以循环内使用.erase(i++)备份迭代器。
 修改： map[key]=value 
 
 #include <set>
