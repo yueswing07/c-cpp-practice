@@ -4,9 +4,8 @@
 1. 首先在程序开头处加上#include<string>以包含所需要的类文件string
 还有一定要加上using namespace std;
 如：string str;
-2. unordered_map和map相同，用法的区别就是，stl::map 的key需要定义operator< 。 而unordered_map需要定义hash_value函数并且重载operator==。对于内置类型，如string，这些都不用操心。对于自定义的类型做key，就需要自己重载operator< 或者hash_value()了。map红黑树有序，unordered_map无序hash值查找效率高。
-//#include <unordered_map> c++11 才支持
-3. map属于关联容器 如果支持c++11尽量用unorder_map,其内部使用hash实现查找效率更高。使用需要关联使用的。
+2.
+3. 
 
 ## 增加 获取 删除 修改
 总结： 
@@ -15,7 +14,34 @@
 删除：指定元素要注意 删除后迭代器会失效。循环内不同于vector的erase返回下一个迭代器，返回void
 所以循环内使用mapObj.erase(i++)备份迭代器。
 修改： map[key]=value 
+#include <string>
+void strTest(){
 
+	// create
+	char *cStr = "abcdef";
+	string str1 = "1234567";
+	string str2(cStr);
+	cout << str1 << endl;
+	cout << str2 << endl;
+
+	// 获取
+	//[]均返回当前字符串中第n个字符的位置，但at函数提供范围检查，当越界时会抛出out_of_range异常，下标运算符[]不提供检查访问。
+	cout << str1[0] << str1.at(1) << endl; 
+	cout << "c style string" << str1.c_str() << endl;
+	cout << str1.find("3") << str1.find("45") << str1.rfind("56") << endl;
+	cout << "find fail " << str1.find("a") << endl;
+
+	//delete 
+	cout << str1.erase(0, 2) << endl;
+
+	//update
+	str1 = "000";
+	cout << str1 << endl;
+	cout << str2.insert(0, "12") << endl;
+	cout << str2.replace(0, 2, "0000");
+	
+
+}
 
 ##参考
 常用方法
