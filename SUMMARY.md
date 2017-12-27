@@ -8,4 +8,5 @@
   * [string](c++-stl/string.md)
   * [map](c++-stl/map.md)
   * [vector](c++-stl/vector.md)
+  * [set](c++-stl/set.md)
 
