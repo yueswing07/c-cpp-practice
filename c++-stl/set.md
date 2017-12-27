@@ -10,7 +10,7 @@
 获取 1.迭代器循环 2.find(val)找到返回迭代器，没有找到返回end迭代器位置
 删除：指定元素要注意 删除后迭代器会失效。循环内不同于vector的erase返回下一个迭代器，返回void
 所以循环内使用.erase(i++)备份迭代器。
-修改： map[key]=value 
+修改： 不支持，可以使用先删除，后添加 
 
 #include <set>
 void setTest(){
