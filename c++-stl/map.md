@@ -1,5 +1,5 @@
 # map总结
-## 定义
+## 概括
 1. 首先在程序开头处加上#include<map>以包含所需要的类文件map
 还有一定要加上using namespace std;
 如：map<string, string> map;
