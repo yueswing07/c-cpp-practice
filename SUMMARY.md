@@ -9,5 +9,5 @@
   * [map](c++-stl/map.md)
   * [vector](c++-stl/vector.md)
   * [set](c++-stl/set.md)
-  * list
+  * [list](c++-stl/list.md)
 
